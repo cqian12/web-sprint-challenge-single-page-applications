@@ -35,7 +35,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
  useRouteMatch allows you to add nested routes so you can just change one parameter without changing the whole URL, so for example pulling the path for a dynamic endpoint from another element. This is useful because you don't have to / can't type links to endpoints where you don't necessarily know you're routing to.   
 2. How would you explain form validation to someone who has never programmed before?
-Form validation involves checking to see that each input for a form is the correct input, and meets certain requirements. For example, if you have an email field, the input should be in an email format. If there is a password field, the password might need to be a certain number of characters long and include certain special characters. Only once all of the fields have been validated can the form be submitted. 
+Form validation involves checking to see that each input for a form is the correct type of input, and meets certain requirements. For example, if you have an email field, the input should be in an email format. If there is a password field, the password might need to be a certain number of characters long and include certain special characters. Only once all of the fields have been validated can the form be submitted. 
 3. In 1-2 sentences, define end to end testing.
 End to end testing looks to see whether a user can accomplish an action on a web page, from start to finish, and focuses on the UI by mimicking the user's actions on the page to accomplish such an action. It is more comprehensive than other forms of testing such as static or integration testing.
 
@@ -54,11 +54,11 @@ End to end testing looks to see whether a user can accomplish an action on a web
 
 Your finished project must include all of the following requirements:
 
-- [ ] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
-- [ ] A order form that has a "/pizza" route and shows the form
+- [x] A homepage that has a "/" route and links to your form (button, nav bar, or any other type of link is acceptable but must have an id of "order-pizza")
+- [x] A order form that has a "/pizza" route and shows the form
 - [x] A form with an id of "pizza-form"
 - [x] A name text input field with an id of "name-input"
-- [ ] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass)
+- [x] Validation for name and the error message is "name must be at least 2 characters" (Use this exact error message to make sure tests pass)
 - [x] A dropdown for pizza size with an id of "size-dropdown"
 - [x] A checklist for toppings - at least 4 (hint: name each separately!)
 - [x] Text input for special instructions with an id of "special-text"
@@ -82,9 +82,9 @@ and there is a key for each of the toppings and they are booleans
 
 Implement the following tests in Cypress:
 
-- [ ] test that you can add text to the box
-- [ ] test that you can select multiple toppings
-- [ ] test that you can submit the form
+- [x] test that you can add text to the box
+- [x] test that you can select multiple toppings
+- [x] test that you can submit the form
 
 In your solution, it is essential that you follow best practices and produce clean and professional results. You will be scored on your adherence to proper code style and good organization. Schedule time to review, refine, and assess your work and perform basic professional polishing including spell-checking and grammar-checking on your work. It is better to submit a challenge that meets MVP than one that attempts too much and does not.
 

@@ -1,25 +1,26 @@
 import React from '../node_modules/react'
 
 export default function Form(props) {
-    const { values, change, submit, disabled, errors } = props
+    const { values, change, submit, disabled, errors } = props 
 
-    const submitEvt = event => {
+    const submitEvt = event => { //submitting should stop page reloading and submit the form
         event.preventDefault()
         submit()
     }
 
-    const changeEvt = event => {
+    const changeEvt = event => { //changes the appropriate element of the form based on user's input
         const { name, value, type, checked } = event.target
         const useThis = type === 'checkbox' ? checked : value
         change(name, useThis)
     }
 
-    return (
+    return ( 
+        //returns each element of the form; any input triggers the change event
         <form id ='pizza-form' onSubmit={submitEvt}>
-            <h2>Add a Pizza to Your Order</h2>
-            <button id = 'order-button' disabled = {disabled}>Submit</button>
+            <h3>Add a Pizza to Your Order</h3>
+            <button id = 'order-button' disabled = {disabled}>Add to Order</button>
             <div>
-                <div>{errors.name}</div>
+                <div>{errors.name}</div> 
             </div>
             <label id = 'name-input'>Name
                 <input 
@@ -41,12 +42,12 @@ export default function Form(props) {
                 </select>
             </label>
             <div>
-                <h2>Toppings</h2>
+                <h4>Toppings</h4>
                 <label>Nuts
                     <input 
                     name = 'nuts'
                     type = 'checkbox'
-                    checked = {values.toppings}
+                    checked = {values.nuts}
                     onChange={changeEvt}
                     />
                 </label>
@@ -54,7 +55,7 @@ export default function Form(props) {
                     <input 
                     name = 'chips'
                     type = 'checkbox'
-                    checked = {values.toppings}
+                    checked = {values.chips}
                     onChange={changeEvt}
                     />
                 </label>
@@ -62,15 +63,7 @@ export default function Form(props) {
                     <input 
                     name = 'marsh'
                     type = 'checkbox'
-                    checked = {values.toppings}
-                    onChange={changeEvt}
-                    />
-                </label>
-                <label>Chocolate Drizzle
-                    <input 
-                    name = 'choc'
-                    type = 'checkbox'
-                    checked = {values.toppings}
+                    checked = {values.marsh}
                     onChange={changeEvt}
                     />
                 </label>
@@ -78,7 +71,7 @@ export default function Form(props) {
                     <input 
                     name = 'caramel'
                     type = 'checkbox'
-                    checked = {values.toppings}
+                    checked = {values.caramel}
                     onChange={changeEvt}
                     />
                 </label>
