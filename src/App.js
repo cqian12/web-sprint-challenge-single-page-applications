@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import { axios } from '../node_modules/axios'
 import { Route, Switch } from "react-router";
 
-import Pizza from './Pizza'
+import Form from './OrderForm'
 
 const App = () => {
 const [order,setOrder] = useState([])
 
   return (
     <div>
-      <h1>Lambda Eats</h1>
+      <h1>Chuck's Dessert Pizza</h1>
 
       <Switch>
         <Route path = '/pizza-order'>
-          <Pizza />
+          <Form />
         </Route>
       </Switch>
     </div>
